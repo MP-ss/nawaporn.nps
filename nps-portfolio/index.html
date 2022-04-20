@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/4c12ce3813.js" crossorigin="anonymous"></script>
+    <!-- link font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Roboto+Mono&display=swap" rel="stylesheet">
+    <!-- link css -->
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="star.css">
+    <!-- favicon -->
+    <link rel="shortcut icon" href="/icon/favicon_1.ico" type="image/x-icon">
+    <title>Nawaporn || Portfolio</title>
+</head>
+
+<body>
+    <div id="stars"></div>
+    <div id="stars2"></div>
+    <div id="stars3"></div>
+    <nav class="menubar">
+        <a href="/index.html"><img src="/img/src/nps-logo.png" alt=""></a>
+        <a href="/work_maya.html" class="workLink">
+            <p>WORK</p>
+        </a>
+    </nav>
+
+    <div class="container1">
+
+        <div class="text" id="conText">
+            <p>welcome to</p>
+            <p>nawaporn Portfolio</p>
+        </div>
+    </div>
+    <div class="container2" id="con2">
+        <div data-aos="zoom-out">
+            <h1>My skill</h1>
+        </div>
+        <div data-aos="zoom-in-up">
+            <div class="skill">
+                <img src="/img/src/Untitled-2.png" alt="">
+                <img src="/img/src/Untitled-2.png" alt="">
+                <img src="/img/src/Untitled-2.png" alt="">
+                <div>
+                    <p>ADOBE</p>
+                    <img src="/img/src/adobe-icon.png" alt="">
+                </div>
+                <div>
+                    <p>CODING</p>
+                    <img src="/img/src/Untitled-4.png" alt="">
+                </div>
+                <div>
+                    <p>3D</p>
+                    <img src="/img/src/maya2.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container3">
+        <div data-aos="zoom-out">
+            <h1>Works</h1>
+        </div>
+        <div data-aos="fade-up" data-aos-anchor-placement="top-bottom">
+
+            <div class="myWork">
+                <div class="box">
+                    <a href="work_maya.html"><img src="/img/3D Maya/sushi720.jpg" alt="">
+                        <p>3D</p>
+                    </a>
+                    <span>3D</span>
+                </div>
+                <div class="box"><a href="" >
+                        <a href="/work_website.html"><img src="/img/3D Maya/code720.jpg" alt="">
+                            <p>WEBSITE</p>
+                        </a>
+                        <span>WEBSITE</span>
+                </div>
+                <div class="box"><a href="">
+                        <a href="work_drawing.html"><img src="/img/3D Maya/pencil720.jpg" alt="">
+                            <p>ILLUSTRATION</p>
+                        </a>
+                        <span>ILLUSTRATION</span>
+                </div>
+                <div class="box">
+                    <a href="work_video.html"><img src="/img/3D Maya/play720.jpg" alt="">
+                        <p>MOTION GRAPHIC</p>
+                    </a>
+                    <span>MOTION GRAPHIC</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="about">
+            <h4>About me</h4>
+            <p>Hey! I'm Nawaporn. I am a 19 years old. I'm studying Computer Science-multimedia at King Mongkut's
+                University of Technology Thonburi. I can draw, do some graphic and edit video. I want to be a Front End
+                Developer!</p>
+        </div>
+        <div class="contact">
+            <h4>Contact</h4>
+            <p>Email: nawpaorn.navis@gmail.com</p>
+            <ul>
+                <li>
+                    <a href="https://www.facebook.com/profile.php?id=100001335266462" target="_blank"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                </li>
+                <li>
+                    <a href="https://instagram.com/n.nps_mp?utm_medium=copy_link" target="_blank"><i
+                            class="fa-brands fa-instagram"></i></a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+
+        var header = document.getElementById('conText');
+        var skill = document.getElementById('con2')
+
+        function fadeOutOnScroll(element) {
+            if (!element) {
+                return;
+            }
+
+            var distanceToTop = window.pageYOffset + element.getBoundingClientRect().top;
+            var elementHeight = element.offsetHeight;
+            var scrollTop = document.documentElement.scrollTop;
+
+            var opacity = 1;
+
+            if (scrollTop > distanceToTop) {
+                opacity = 1 - (scrollTop - distanceToTop) / elementHeight;
+            }
+
+            if (opacity >= 0) {
+                element.style.opacity = opacity;
+            }
+        }
+
+        function scrollHandler() {
+            fadeOutOnScroll(header);
+            fadeOutOnScroll(skill);
+        }
+
+        window.addEventListener('scroll', scrollHandler);
+    </script>
+</body>
+
+</html>
