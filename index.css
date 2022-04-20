@@ -1,0 +1,322 @@
+body{
+    margin: 0;
+    background: radial-gradient(ellipse at bottom, #351b1b 0%, #090a0f 100%);
+    overflow-x: hidden;
+    user-select: none;
+}
+
+.menubar{
+    width: 100%;
+    position: -webkit-sticky;
+	position: sticky;
+	top: 0;
+    z-index: 1;
+    background: rgba(0, 0, 0, 0.493);
+}
+
+.menubar > a >p {
+    display: inline;
+}
+
+.menubar a img{
+    width: 10vh;
+    height: 10vh;
+    margin-left: 2vh;
+}
+
+.workLink{
+    float: right;
+    font-family: 'Anton', sans-serif;
+    text-decoration: none;
+    color: #ff5050;
+    font-size: 30px;
+    margin: 25px;
+}
+
+.workLink:hover{
+    color: #d14545;
+    text-decoration: underline;
+}
+
+.container1{
+    width: 100%;
+    height: 650px;
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    text-transform: uppercase;
+    font-size: 85px;
+    padding-top: 250px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.text p {
+    margin: 20px;
+} 
+
+.container2{
+    width: 100%;
+    height: 600px;
+    padding-bottom: 40px;
+    color: white;
+    margin-bottom: 150px;
+    background: rgba(0, 0, 0, 0.37);
+}
+
+.container2 h1{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 55px;
+    font-weight: 100;
+    padding-top: 65px;
+}
+
+.skill{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-evenly;
+    margin-top: 50px;
+}
+
+.skill div{
+    width: 560px;
+    text-align: center;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border: white solid 5px;
+    border-top: none;
+    font-family: 'Anton', sans-serif;
+    font-size: 45px;
+    padding: 100px 0 100px 0;
+    -webkit-transition: 0.17s ease-in;
+    transition: 0.17s ease-in;
+    position: relative;
+}
+
+.skill div:hover{
+    padding: 20px 0 20px 0;
+}
+
+.skill div p{
+    margin: 0;
+}
+
+.skill div:hover img{
+    opacity: 1;
+}
+
+.skill div img{
+    margin: 0;
+    transition: all .2s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+} 
+
+.container3{
+    width: 100%;
+    height: 1150px;
+    color: white;
+}
+
+.container3 h1{
+    text-align: center;
+    font-family: 'Anton', sans-serif;
+    font-size: 55px;
+    font-weight: 100;
+    margin: 0;
+}
+
+.myWork{
+    display: flex;
+    padding: 4% 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+}
+
+.box {
+    flex: 1;
+    overflow: hidden;
+    transition: 0.35s;
+    margin: 0 2%;
+    box-shadow: 0 15px 35px rgba(250, 77, 77, 0.568);
+    line-height: 0;
+    position: relative;
+}
+
+.box a img{
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover;
+    object-position: right;
+    transition: 0.35s; 
+}
+
+.box > span {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3.5vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+  }
+
+.box:hover { 
+    flex: 1 1 50%;
+}
+
+.box:hover > a > img {
+    width: 100%;
+    height: 100%; 
+    filter: blur(9px);
+    -webkit-filter: blur(9px);
+}
+
+.box p{
+    display: none;
+    position: absolute;
+    font-family: 'Anton', sans-serif;
+    font-size: 10vh;
+    top: 40%;
+    left: 40%;
+    color: white;
+}
+
+.box:hover p{
+    display: block;
+}
+
+footer{
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: space-evenly;
+    height: 220px;
+    background: rgba(0, 0, 0, 0.37);
+}
+
+footer h4{
+    font-size: 24px;
+    margin-bottom: 5px;
+    color: white;
+}
+
+footer p{
+    color: white;
+}
+
+.about p{
+    width: 79vh;
+}
+
+.contact p{
+    display: inline;
+}
+
+.contact i{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    color: white;
+    font-size: 24px;
+}
+
+.contact i:hover{
+    color: #c32aa3;
+}
+
+.contact ul{
+    display: flex;
+    padding: 0;
+}
+
+.contact ul li{
+    list-style: none;
+    margin: 0 10px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    text-align: center;
+    line-height: 65px;
+    display: block;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #fff;
+    z-index: 1;
+  }
+  
+  .contact ul li a .fa-brands {
+    font-size: 35px;
+    position: relative;
+    color: #262626;
+    transition: .5s;
+    z-index: 3;
+  }
+  
+  .contact ul li a:hover .fa-brands {
+    color: #fff;
+  }
+  
+  .contact ul li a:before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: .5s;
+    z-index: 2;
+  }
+  
+  .contact ul li a:hover:before {
+    top: 0;
+  }
+  
+  .contact ul li:nth-child(1) a:before{
+    background: #3b5999;
+  }
+  
+  .contact ul li:nth-child(2) a:before{
+    background: linear-gradient(130deg,#4c5fd7, #7232bd,#c32aa3,#f46f30,#ffdc7d);
+  }
+
+  .tooltip {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .tooltip span {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.15s;
+  }
+  
+  .tooltip span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+  }
+  
+  .tooltip:hover span {
+    visibility: visible;
+    opacity: 1;
+  }
